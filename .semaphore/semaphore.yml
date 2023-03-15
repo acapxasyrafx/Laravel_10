@@ -28,6 +28,11 @@ blocks:
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
+      prologue:
+        commands:
+          - 'git remote add upstream ''https://github.com/Araken-Sdn-Bhd/Laravel_10.git'''
+          - git fetch upstream
+          - git merge upstream/main
     dependencies: []
   - name: Run Code Analysis
     task:
