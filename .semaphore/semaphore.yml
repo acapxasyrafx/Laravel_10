@@ -18,7 +18,7 @@ blocks:
       jobs:
         - name: composer
           commands:
-            - checkout
+            - checkoutgit f
             - cache restore
             - composer update
             - composer install
